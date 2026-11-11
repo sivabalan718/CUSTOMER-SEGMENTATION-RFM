@@ -1,0 +1,4 @@
+KMeans_Cluster,Customers,Recency_Median,Frequency_Median,Monetary_Median,Recency_Mean,Frequency_Mean,Monetary_Mean,Recency_P25,Recency_P75,Frequency_P25,Frequency_P75,Monetary_P25,Monetary_P75,Customer_Percent,Suggested_Segment_Name
+0,2038,46.0,2.0,508.8,55.307163886162904,2.048577036310108,612.6749411187438,22.0,79.0,1.0,3.0,286.115,801.3,46.98017519594283,Occasional / Lower-Spend Customers
+1,980,253.0,1.0,290.455,255.7030612244898,1.3918367346938776,397.02549999999997,201.0,306.0,1.0,2.0,155.9225,459.04,22.591055786076534,"At-Risk / Inactive, Low-Frequency Customers"
+2,1320,18.0,7.0,2570.495,30.596212121212123,9.843181818181819,5492.039674242425,8.0,38.0,5.0,11.0,1689.7675,4303.415,30.428769017980635,"Recent, Frequent, High-Spend Customers"

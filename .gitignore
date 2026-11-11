@@ -1,0 +1,21 @@
+# Local environment and caches (recreate with: python -m venv .venv && .venv\Scripts\pip install -r requirements.txt)
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Secrets and local settings (never commit API keys)
+.env
+*.env
+.streamlit/secrets.toml
+
+# Office lock / temporary files
+~$*
+*.tmp
+.~lock.*
+
+# Non-software submission deliverables (local Word/PDF reports and slide decks)
+reports/
+presentations/

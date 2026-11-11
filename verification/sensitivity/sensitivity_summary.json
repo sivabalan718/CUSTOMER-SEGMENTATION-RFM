@@ -1,0 +1,256 @@
+{
+ "S0_customer_12346": {
+  "raw_lines": [
+   {
+    "InvoiceNo": "541431",
+    "StockCode": "23166",
+    "Description": "MEDIUM CERAMIC TOP STORAGE JAR",
+    "Quantity": "74215",
+    "InvoiceDate": "2011-01-18 10:01:00",
+    "UnitPrice": "1.04",
+    "LineValue": "77183.6"
+   },
+   {
+    "InvoiceNo": "C541433",
+    "StockCode": "23166",
+    "Description": "MEDIUM CERAMIC TOP STORAGE JAR",
+    "Quantity": "-74215",
+    "InvoiceDate": "2011-01-18 10:17:00",
+    "UnitPrice": "1.04",
+    "LineValue": "-77183.6"
+   }
+  ],
+  "gross_positive_value": 77183.6,
+  "net_value": 0.0,
+  "primary_rfm_row": {
+   "Recency": 326,
+   "Frequency": 1,
+   "Monetary": 77183.6
+  },
+  "primary_cluster": 2
+ },
+ "S1_cancellations": {
+  "rule": "Cancellation line = InvoiceNo starting with 'C' among de-duplicated identified-customer rows; net = gross positive purchase value + sum(Quantity x UnitPrice) of that customer's cancellation lines over the whole data period (customer-level netting, no line-level matching).",
+  "cancellation_lines": 8872,
+  "cancellation_lines_with_quantity_ge_0": 0,
+  "cancellation_value": -608689.47,
+  "cancellation_value_by_stockcode_type": {
+   "product_codes": -471750.71,
+   "non_product_codes": -136938.76
+  },
+  "non_product_cancellation_codes": {
+   "C2": {
+    "lines": 1,
+    "value": -50.0
+   },
+   "CRUK": {
+    "lines": 16,
+    "value": -7933.43
+   },
+   "D": {
+    "lines": 77,
+    "value": -5696.22
+   },
+   "M": {
+    "lines": 175,
+    "value": -112165.39
+   },
+   "POST": {
+    "lines": 97,
+    "value": -11093.72
+   }
+  },
+  "customers_with_any_cancellation": 1589,
+  "customers_with_cancellations_but_no_purchase_lines": 33
+ },
+ "S1_net_spend": {
+  "rfm_customers": 4338,
+  "customers_net_le_0": 21,
+  "customers_net_eq_0": 13,
+  "customers_net_lt_0": 8,
+  "customers_net_below_50pct_of_gross": 39,
+  "total_gross": 8887208.89,
+  "total_net": 8288930.66,
+  "tolerance_used_for_zero": 0.005
+ },
+ "S1_matching_diagnostic": {
+  "rule": "A cancellation line is 'covered' if the same customer bought at least the cumulative cancelled quantity of the same StockCode at or before the cancellation timestamp. Price, invoice and line-level pairing are not used, so this is a plausibility diagnostic, not a definitive match.",
+  "lines": {
+   "covered by earlier purchases": 7463,
+   "unmatched (no earlier purchase of same StockCode by same customer in data window)": 1303,
+   "partially covered": 106
+  },
+  "value": {
+   "covered by earlier purchases": -463075.72,
+   "partially covered": -21413.57,
+   "unmatched (no earlier purchase of same StockCode by same customer in data window)": -124200.18
+  }
+ },
+ "S1_clustering": {
+  "customers": 4317,
+  "best_k_by_silhouette": 3,
+  "silhouette_k3": 0.4158,
+  "silhouette_by_k": {
+   "2": 0.4062,
+   "3": 0.4158,
+   "4": 0.3803,
+   "5": 0.3441,
+   "6": 0.3308,
+   "7": 0.2979,
+   "8": 0.2988
+  },
+  "ari_vs_primary_k3": 0.9844,
+  "cluster_sizes": [
+   978,
+   1319,
+   2020
+  ],
+  "excluded_customers_net_le_0": 21
+ },
+ "S2_non_product": {
+  "rule_A": {
+   "stock_codes": [
+    "BANK CHARGES",
+    "C2",
+    "DOT",
+    "M",
+    "POST"
+   ],
+   "lines_removed": 1539,
+   "value_removed": 149981.25,
+   "customers_affected": 542,
+   "customers_dropping_out": 4,
+   "reference_date": "2011-12-10",
+   "customers_with_changed_frequency": 97,
+   "customers_with_changed_recency": 25,
+   "removed_lines_by_code": {
+    "BANK CHARGES": {
+     "lines": 12,
+     "value": 165.0
+    },
+    "C2": {
+     "lines": 133,
+     "value": 6686.0
+    },
+    "DOT": {
+     "lines": 16,
+     "value": 11906.36
+    },
+    "M": {
+     "lines": 279,
+     "value": 53419.93
+    },
+    "POST": {
+     "lines": 1099,
+     "value": 77803.96
+    }
+   },
+   "customers": 4334,
+   "best_k_by_silhouette": 3,
+   "silhouette_k3": 0.4151,
+   "silhouette_by_k": {
+    "2": 0.4064,
+    "3": 0.4151,
+    "4": 0.3803,
+    "5": 0.3443,
+    "6": 0.3322,
+    "7": 0.3013,
+    "8": 0.3002
+   },
+   "ari_vs_primary_k3": 0.9763,
+   "cluster_sizes": [
+    985,
+    1328,
+    2021
+   ]
+  },
+  "rule_B": {
+   "stock_codes": [
+    "23444",
+    "BANK CHARGES",
+    "C2",
+    "DOT",
+    "M",
+    "POST"
+   ],
+   "lines_removed": 1618,
+   "value_removed": 151181.25,
+   "customers_affected": 603,
+   "customers_dropping_out": 4,
+   "reference_date": "2011-12-10",
+   "customers_with_changed_frequency": 97,
+   "customers_with_changed_recency": 25,
+   "removed_lines_by_code": {
+    "23444": {
+     "lines": 79,
+     "value": 1200.0
+    },
+    "BANK CHARGES": {
+     "lines": 12,
+     "value": 165.0
+    },
+    "C2": {
+     "lines": 133,
+     "value": 6686.0
+    },
+    "DOT": {
+     "lines": 16,
+     "value": 11906.36
+    },
+    "M": {
+     "lines": 279,
+     "value": 53419.93
+    },
+    "POST": {
+     "lines": 1099,
+     "value": 77803.96
+    }
+   },
+   "customers": 4334,
+   "best_k_by_silhouette": 3,
+   "silhouette_k3": 0.4151,
+   "silhouette_by_k": {
+    "2": 0.4064,
+    "3": 0.4151,
+    "4": 0.3802,
+    "5": 0.3443,
+    "6": 0.3309,
+    "7": 0.301,
+    "8": 0.3004
+   },
+   "ari_vs_primary_k3": 0.9763,
+   "cluster_sizes": [
+    985,
+    1328,
+    2021
+   ]
+  },
+  "note": "PADS ('PADS TO MATCH ALL CUSHIONS', 3 lines, value 0.003) is treated as a product. Rule A matches the five non-numeric service/adjustment codes; rule B adds 23444 'Next Day Carriage'."
+ },
+ "S3_log_recency": {
+  "customers": 4338,
+  "best_k_by_silhouette": 2,
+  "silhouette_k3": 0.3363,
+  "silhouette_by_k": {
+   "2": 0.4325,
+   "3": 0.3363,
+   "4": 0.3329,
+   "5": 0.3181,
+   "6": 0.3129,
+   "7": 0.3103,
+   "8": 0.3021
+  },
+  "ari_vs_primary_k3": 0.3181,
+  "cluster_sizes": [
+   775,
+   1697,
+   1866
+  ]
+ },
+ "versions": {
+  "python": "3.11.5",
+  "pandas": "2.3.2",
+  "numpy": "2.3.3",
+  "sklearn": "1.7.2"
+ }
+}

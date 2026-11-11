@@ -1,0 +1,16 @@
+Variant,Variant_Cluster,Customers,Recency_Median,Frequency_Median,Monetary_Median,Monetary_Mean,Segment_Name
+PRIMARY (Phase 5),0,2038,46.0,2.0,508.8,612.6749411187438,Occasional / Lower-Spend Customers
+PRIMARY (Phase 5),1,980,253.0,1.0,290.455,397.02549999999997,"At-Risk / Inactive, Low-Frequency Customers"
+PRIMARY (Phase 5),2,1320,18.0,7.0,2570.495,5492.039674242425,"Recent, Frequent, High-Spend Customers"
+S1 net Monetary (customers with net > 0),0,978,252.0,1.0,275.34,386.1645296523517,"At-Risk / Inactive, Low-Frequency Customers"
+S1 net Monetary (customers with net > 0),1,1319,18.0,7.0,2504.13,5079.700371493555,"Recent, Frequent, High-Spend Customers"
+S1 net Monetary (customers with net > 0),2,2020,46.0,2.0,500.77,600.9677524752476,Occasional / Lower-Spend Customers
+S2 non-product excluded (rule_A),0,2021,46.0,2.0,501.12,602.9462790697675,Occasional / Lower-Spend Customers
+S2 non-product excluded (rule_A),1,1328,18.0,7.0,2498.855,5361.561061746987,"Recent, Frequent, High-Spend Customers"
+S2 non-product excluded (rule_A),2,985,253.0,1.0,290.34,404.5889543147208,"At-Risk / Inactive, Low-Frequency Customers"
+S2 non-product excluded (rule_B),0,2021,46.0,2.0,501.12,602.7013508164275,Occasional / Lower-Spend Customers
+S2 non-product excluded (rule_B),1,1328,18.0,7.0,2495.165,5361.075368975903,"Recent, Frequent, High-Spend Customers"
+S2 non-product excluded (rule_B),2,985,253.0,1.0,290.34,404.52804060913707,"At-Risk / Inactive, Low-Frequency Customers"
+S3 log1p(Recency) + log1p(F) + log1p(M),0,775,10.0,10.0,3701.44,7879.996116129033,"Recent, Frequent, High-Spend Customers"
+S3 log1p(Recency) + log1p(F) + log1p(M),1,1866,160.0,1.0,296.09000000000003,362.51290460878886,"At-Risk / Inactive, Low-Frequency Customers"
+S3 log1p(Recency) + log1p(F) + log1p(M),2,1697,30.0,3.0,962.19,1239.6952386564524,"Recent, Frequent, High-Spend Customers"

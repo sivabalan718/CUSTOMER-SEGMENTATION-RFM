@@ -1,0 +1,9 @@
+Attribute,dtype,non_null,missing,missing_pct,unique_values
+InvoiceNo,object,541909,0,0.0,25900
+StockCode,object,541909,0,0.0,4070
+Description,object,540455,1454,0.268,4223
+Quantity,int64,541909,0,0.0,722
+InvoiceDate,datetime64[ns],541909,0,0.0,23260
+UnitPrice,float64,541909,0,0.0,1630
+CustomerID,float64,406829,135080,24.927,4372
+Country,object,541909,0,0.0,38

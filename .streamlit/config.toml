@@ -1,0 +1,14 @@
+# SegmentIQ theme — premium light academic analytics theme.
+[theme]
+base = "light"
+primaryColor = "#6655D9"
+backgroundColor = "#F7F8FC"
+secondaryBackgroundColor = "#EEF0F7"
+textColor = "#182033"
+font = "sans serif"
+
+[client]
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false

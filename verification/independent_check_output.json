@@ -1,0 +1,318 @@
+{
+ "raw_shape": [
+  541909,
+  8
+ ],
+ "raw_columns": [
+  "InvoiceNo",
+  "StockCode",
+  "Description",
+  "Quantity",
+  "InvoiceDate",
+  "UnitPrice",
+  "CustomerID",
+  "Country"
+ ],
+ "raw_missing_customerid": 135080,
+ "raw_cancel_rows": 9288,
+ "raw_nonpos_qty": 10624,
+ "raw_nonpos_price": 2517,
+ "raw_invoice_prefixes": {
+  "": 532618,
+  "C": 9288,
+  "A": 3
+ },
+ "raw_exact_dups_untrimmed": 5268,
+ "raw_noncancel_nonpos_qty": 1336,
+ "raw_noncancel_nonpos_qty_with_customerid": 0,
+ "raw_cancel_rows_with_qty_gt_0": 0,
+ "raw_A_prefix_rows_with_customerid": 0,
+ "raw_missing_customerid_rows_that_are_duplicates": 43,
+ "raw_missing_description_with_customerid": 0,
+ "raw_date_range": [
+  "2010-12-01 08:26:00",
+  "2011-12-09 12:50:00"
+ ],
+ "funnel": [
+  [
+   "raw",
+   541909
+  ],
+  [
+   "after_dedup",
+   536641
+  ],
+  [
+   "after_customerid",
+   401604
+  ],
+  [
+   "after_cancel",
+   392732
+  ],
+  [
+   "after_qty",
+   392732
+  ],
+  [
+   "after_price",
+   392692
+  ],
+  [
+   "after_required",
+   392692
+  ]
+ ],
+ "removed_per_step": {
+  "after_dedup": 5268,
+  "after_customerid": 135037,
+  "after_cancel": 8872,
+  "after_qty": 0,
+  "after_price": 40,
+  "after_required": 0
+ },
+ "nonpos_qty_after_cancel": 0,
+ "nonpos_price_after_cancel": 40,
+ "nonpos_both_after_cancel": 0,
+ "dups_after_trim": 5268,
+ "cancel_rows_after_dedup_all_customers": 9251,
+ "saved_clean_shape": [
+  392692,
+  9
+ ],
+ "saved_clean_columns": [
+  "InvoiceNo",
+  "StockCode",
+  "Description",
+  "Quantity",
+  "InvoiceDate",
+  "UnitPrice",
+  "CustomerID",
+  "Country",
+  "LineValue"
+ ],
+ "saved_clean_checks": {
+  "missing_customerid": 0,
+  "nonpos_qty": 0,
+  "nonpos_price": 0,
+  "cancel_prefix": 0,
+  "full_duplicates": 0,
+  "linevalue_mismatch": 0,
+  "null_counts": {
+   "InvoiceNo": 0,
+   "StockCode": 0,
+   "Description": 0,
+   "Quantity": 0,
+   "InvoiceDate": 0,
+   "UnitPrice": 0,
+   "CustomerID": 0,
+   "Country": 0,
+   "LineValue": 0
+  }
+ },
+ "clean_rows_identical_in_order": true,
+ "clean_total_linevalue": 8887208.89,
+ "outlier_q995": {
+  "Quantity": 200.0,
+  "UnitPrice": 16.95,
+  "LineValue": 306.0
+ },
+ "outlier_rows_above_q995": {
+  "Quantity": 1711,
+  "UnitPrice": 1949,
+  "LineValue": 1923
+ },
+ "latest_invoice": "2011-12-09 12:50:00",
+ "reference_date": "2011-12-10",
+ "rfm_customers": 4338,
+ "frequency_if_counting_lines_median": 41.0,
+ "rfm_summary": {
+  "Recency": [
+   1.0,
+   51.0,
+   374.0
+  ],
+  "Frequency": [
+   1.0,
+   2.0,
+   209.0
+  ],
+  "Monetary": [
+   3.75,
+   668.5699999999999,
+   280206.02
+  ]
+ },
+ "rfm_total_monetary": 8887208.89,
+ "invoices_with_multiple_customers": 0,
+ "invoices_with_multiple_timestamps": 30,
+ "customers_with_multiple_countries": 8,
+ "saved_rfm_shape": [
+  4338,
+  8
+ ],
+ "saved_rfm_dup_ids": 0,
+ "saved_rfm_nulls": {
+  "CustomerID": 0,
+  "Recency": 0,
+  "Frequency": 0,
+  "Monetary": 0,
+  "TotalItems": 0,
+  "DistinctProducts": 0,
+  "Country": 0,
+  "LastPurchaseDate": 0
+ },
+ "rfm_id_match": {
+  "both": 4338,
+  "left_only": 0,
+  "right_only": 0
+ },
+ "rfm_value_mismatches": {
+  "Recency": 0,
+  "Frequency": 0,
+  "Monetary": 0
+ },
+ "eval_recomputed": [
+  {
+   "K": 2,
+   "Inertia": 6874.04728,
+   "Silhouette Score": 0.406287,
+   "Davies-Bouldin Index": 0.915325,
+   "Calinski-Harabasz Score": 3872.955965,
+   "Smallest Cluster": 1820,
+   "Largest Cluster": 2518
+  },
+  {
+   "K": 3,
+   "Inertia": 4299.200974,
+   "Silhouette Score": 0.415654,
+   "Davies-Bouldin Index": 0.824915,
+   "Calinski-Harabasz Score": 4393.725897,
+   "Smallest Cluster": 980,
+   "Largest Cluster": 2038
+  },
+  {
+   "K": 4,
+   "Inertia": 3242.934843,
+   "Silhouette Score": 0.379421,
+   "Davies-Bouldin Index": 0.859949,
+   "Calinski-Harabasz Score": 4352.845066,
+   "Smallest Cluster": 573,
+   "Largest Cluster": 1450
+  },
+  {
+   "K": 5,
+   "Inertia": 2760.683133,
+   "Silhouette Score": 0.343462,
+   "Davies-Bouldin Index": 0.94098,
+   "Calinski-Harabasz Score": 4023.245321,
+   "Smallest Cluster": 324,
+   "Largest Cluster": 1201
+  },
+  {
+   "K": 6,
+   "Inertia": 2396.802726,
+   "Silhouette Score": 0.331644,
+   "Davies-Bouldin Index": 0.96922,
+   "Calinski-Harabasz Score": 3837.9672,
+   "Smallest Cluster": 324,
+   "Largest Cluster": 1100
+  },
+  {
+   "K": 7,
+   "Inertia": 2167.087137,
+   "Silhouette Score": 0.300838,
+   "Davies-Bouldin Index": 1.018503,
+   "Calinski-Harabasz Score": 3613.004659,
+   "Smallest Cluster": 205,
+   "Largest Cluster": 960
+  },
+  {
+   "K": 8,
+   "Inertia": 1961.650612,
+   "Silhouette Score": 0.299456,
+   "Davies-Bouldin Index": 1.000298,
+   "Calinski-Harabasz Score": 3485.170187,
+   "Smallest Cluster": 173,
+   "Largest Cluster": 888
+  }
+ ],
+ "eval_max_abs_diff_vs_saved": {
+  "Inertia": 4.547473508864641e-13,
+  "Silhouette Score": 5.551115123125783e-17,
+  "Davies-Bouldin Index": 1.1102230246251565e-16,
+  "Calinski-Harabasz Score": 9.094947017729282e-13,
+  "Smallest Cluster": 0.0,
+  "Largest Cluster": 0.0
+ },
+ "best_k_by_silhouette": 3,
+ "best_k_by_db": 3,
+ "best_k_by_ch": 3,
+ "cluster_label_mismatch_vs_saved": 0,
+ "clusters_ids_aligned": true,
+ "profile_recomputed": [
+  {
+   "Cluster": 0,
+   "Customers": 2038,
+   "Recency_Median": 46.0,
+   "Frequency_Median": 2.0,
+   "Monetary_Median": 508.8,
+   "Recency_Mean": 55.3072,
+   "Frequency_Mean": 2.0486,
+   "Monetary_Mean": 612.6749
+  },
+  {
+   "Cluster": 1,
+   "Customers": 980,
+   "Recency_Median": 253.0,
+   "Frequency_Median": 1.0,
+   "Monetary_Median": 290.455,
+   "Recency_Mean": 255.7031,
+   "Frequency_Mean": 1.3918,
+   "Monetary_Mean": 397.0255
+  },
+  {
+   "Cluster": 2,
+   "Customers": 1320,
+   "Recency_Median": 18.0,
+   "Frequency_Median": 7.0,
+   "Monetary_Median": 2570.495,
+   "Recency_Mean": 30.5962,
+   "Frequency_Mean": 9.8432,
+   "Monetary_Mean": 5492.0397
+  }
+ ],
+ "profile_max_abs_diff_vs_saved": 5.684341886080802e-14,
+ "k3_ari_across_seeds": [
+  0.9993,
+  0.9993,
+  0.9993,
+  0.9993,
+  0.9993
+ ],
+ "versions": {
+  "python": "3.11.5",
+  "pandas": "2.3.2",
+  "numpy": "2.3.3",
+  "sklearn": "1.7.2"
+ },
+ "checks": {
+  "Raw file shape is 541,909 x 8 with the 8 documented columns": "PASS",
+  "Sequential removal counts 5,268 / 135,037 / 8,872 / 0 / 40 / 0": "PASS",
+  "Saved audit CSV reconciles with recomputed funnel": "PASS",
+  "Cleaned CSV has 392,692 rows x 9 expected columns": "PASS",
+  "Cleaned CSV identical (row order and values) to recomputation": "PASS",
+  "Cleaned CSV: no missing IDs, cancellations, non-positive qty/price, duplicates or LineValue errors": "PASS",
+  "RFM: 4,338 customers, unique IDs, no missing values": "PASS",
+  "RFM: Recency, Frequency, Monetary match for every customer (Monetary tol 0.006)": "PASS",
+  "RFM reference date is 2011-12-10": "PASS",
+  "Frequency = distinct invoices (no invoice shared by two customers)": "PASS",
+  "Phase 5 metrics match saved evaluation (abs tol 1e-9; inertia/CH rel tol 1e-12)": "PASS",
+  "Silhouette, Davies-Bouldin and Calinski-Harabasz all select K=3": "PASS",
+  "All 4,338 saved cluster labels equal recomputed labels": "PASS",
+  "Saved cluster profiles match recomputation (abs tol 1e-9)": "PASS",
+  "K=3 solution stable across seeds (ARI >= 0.99)": "PASS"
+ },
+ "n_pass": 15,
+ "n_fail": 0
+}

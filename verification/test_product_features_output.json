@@ -1,0 +1,162 @@
+{
+ "E1 retained lines unchanged (392,692)": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "E2 removed lines equal reversal records (one-to-one)": {
+  "status": "PASS",
+  "detail": "2769 vs 2769"
+ },
+ "E3 eligible = retained - reversed": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "E4 no cancellation invoices in eligible lines": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "E5 eligible quantities and prices positive": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "E6 every reversal matches a real cancellation of the same quantity": {
+  "status": "PASS",
+  "detail": "2769/2769"
+ },
+ "E7 cancelled bulk orders (80,995 and 74,215 units) excluded": {
+  "status": "PASS",
+  "detail": "{'23166': 288}"
+ },
+ "E8 segmentation inputs untouched (4,338 RFM rows)": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "P1 quantity ranking equals grouped Quantity sums": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "P2 invoice ranking counts distinct invoices": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "P3 demand series = monthly Quantity sums, 13 ordered months": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "P4 segment products use the CustomerID-cluster join": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "P5 repeat rate = buyers with >=2 distinct invoices / buyers": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "P6 several lines on one invoice never count as a repeat": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "S1 customer values reconcile with eligible total": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "S2 average invoice value = value / distinct invoices": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "S3 average units per invoice = units / distinct invoices": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "S4 country values reconcile with eligible total": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "S5 monthly active customers count each customer once per month": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "S6 monthly invoice counts sum to distinct invoices": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "B1 one basket per invoice, product counted at most once": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "B2 itemset counts equal direct basket counts (sampled)": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "B3 support, confidence, lift formulas": {
+  "status": "PASS",
+  "detail": "top rule lift 29.27"
+ },
+ "B4 itemsets identical to mlxtend apriori": {
+  "status": "PASS",
+  "detail": "467 vs 467"
+ },
+ "B5 impossible thresholds give an empty table, no error": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "F1 forecast produced with validation for a well-populated product": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "F2 partial month excluded; chronological holdout = last 3 full months": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "F3 holdout months cannot influence the holdout predictions (no leakage)": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "F4 forecasts and intervals are non-negative and ordered": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "F5 sparse history gives an explanation, not a forecast": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "U1 sidebar has 12 sections including the 4 new ones": {
+  "status": "PASS",
+  "detail": "['Overview', 'Dataset & EDA', 'Preprocessing', 'RFM Analysis', 'Customer Segmentation', 'Model Evaluation', 'Results & Insights', 'Product Intelligence', 'Sales & Customer Insights', 'Market Basket Analysis', 'Demand Forecasting', 'About the Project']"
+ },
+ "U2 page 'products' renders without exceptions": {
+  "status": "PASS",
+  "detail": "[]"
+ },
+ "U2 page 'sales' renders without exceptions": {
+  "status": "PASS",
+  "detail": "[]"
+ },
+ "U2 page 'basket' renders without exceptions": {
+  "status": "PASS",
+  "detail": "[]"
+ },
+ "U2 page 'forecast' renders without exceptions": {
+  "status": "PASS",
+  "detail": "[]"
+ },
+ "U2 page 'overview' renders without exceptions": {
+  "status": "PASS",
+  "detail": "[]"
+ },
+ "U2 page 'segmentation' renders without exceptions": {
+  "status": "PASS",
+  "detail": "[]"
+ },
+ "U2 page 'evaluation' renders without exceptions": {
+  "status": "PASS",
+  "detail": "[]"
+ },
+ "U2 page 'about' renders without exceptions": {
+  "status": "PASS",
+  "detail": "[]"
+ },
+ "U3 basket page with no qualifying rules shows a message": {
+  "status": "PASS",
+  "detail": ""
+ }
+}

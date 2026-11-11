@@ -1,0 +1,9 @@
+Step,Rows,Reason / rule,Rows_Before,Rows_After
+Raw rows loaded,541909,Original dataset rows; unchanged source file retained,541909,541909
+Exact duplicate rows removed,5268,Removed exact duplicate rows from analysis copy,541909,536641
+Rows without CustomerID excluded from RFM preparation,135037,Cannot build customer-level RFM without customer ID; counted after de-duplication,536641,401604
+Cancellation invoice rows excluded,8872,InvoiceNo begins with C; counted after de-duplication and CustomerID filter; retained in raw source,401604,392732
+Rows with non-positive quantity excluded,0,After cancellation exclusion; not valid positive purchase lines for this pipeline,392732,392732
+Rows with non-positive UnitPrice excluded,40,After quantity rule; monetary feature requires positive unit price,392732,392692
+Rows failing required invoice/date/stock-code checks,0,After earlier rules; invalid essential fields,392692,392692
+Clean positive purchase lines retained,392692,Eligible transaction lines for customer RFM aggregation,392692,392692

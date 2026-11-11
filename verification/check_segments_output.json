@@ -1,0 +1,122 @@
+{
+ "root": "processed",
+ "checks": {
+  "P5 evaluation table covers K = 2..8": {
+   "status": "PASS"
+  },
+  "P5 metrics match recomputation (abs tol 1e-9; CH and inertia rel tol 1e-9)": {
+   "status": "PASS",
+   "detail": {
+    "Silhouette Score": 5.551115123125783e-17,
+    "Davies-Bouldin Index": 1.1102230246251565e-16,
+    "Calinski-Harabasz Score": 9.094947017729282e-13,
+    "Inertia": 9.094947017729282e-13
+   }
+  },
+  "P5 cluster sizes match recomputation exactly": {
+   "status": "PASS"
+  },
+  "P5 K = 3 is selected (maximum silhouette)": {
+   "status": "PASS",
+   "detail": 3
+  },
+  "P5 claim: K = 3 is best on silhouette, Davies-Bouldin and Calinski-Harabasz": {
+   "status": "PASS",
+   "detail": {
+    "Silhouette Score": 3,
+    "Davies-Bouldin Index": 3,
+    "Calinski-Harabasz Score": 3
+   }
+  },
+  "P5 labels: same 4,338 customers as Phase 4 (CustomerID join)": {
+   "status": "PASS"
+  },
+  "P5 K = 3 labels identical to recomputation": {
+   "status": "PASS"
+  },
+  "P5 stability: mean ARI across five other random seeds >= 0.99": {
+   "status": "PASS",
+   "detail": 0.9993
+  },
+  "P5 RFM values in label file match Phase 4 by CustomerID": {
+   "status": "PASS"
+  },
+  "P7 labels: same 4,338 customers as Phase 5 (CustomerID join)": {
+   "status": "PASS"
+  },
+  "P7 cluster labels identical to Phase 5 by CustomerID": {
+   "status": "PASS"
+  },
+  "P7 segment names identical to Phase 5 by CustomerID": {
+   "status": "PASS"
+  },
+  "P7 RFM values match Phase 4 by CustomerID": {
+   "status": "PASS"
+  },
+  "P7 profile counts/medians/means match recomputation": {
+   "status": "PASS"
+  },
+  "P7 percentiles (P25/P75) match recomputation": {
+   "status": "PASS"
+  },
+  "P7 customer percentages sum to 100 and counts to 4,338": {
+   "status": "PASS"
+  },
+  "P7 every segment name is supported by its medians vs population medians (strict)": {
+   "status": "PASS",
+   "detail": {
+    "population_medians": {
+     "Recency": 51.0,
+     "Frequency": 2.0,
+     "Monetary": 668.57
+    },
+    "segments": [
+     {
+      "cluster": 0,
+      "name": "Occasional / Lower-Spend Customers",
+      "medians": {
+       "R": 46.0,
+       "F": 2.0,
+       "M": 508.8
+      },
+      "justified": true
+     },
+     {
+      "cluster": 1,
+      "name": "At-Risk / Inactive, Low-Frequency Customers",
+      "medians": {
+       "R": 253.0,
+       "F": 1.0,
+       "M": 290.455
+      },
+      "justified": true
+     },
+     {
+      "cluster": 2,
+      "name": "Recent, Frequent, High-Spend Customers",
+      "medians": {
+       "R": 18.0,
+       "F": 7.0,
+       "M": 2570.495
+      },
+      "justified": true
+     }
+    ]
+   }
+  },
+  "P7 names are unique": {
+   "status": "PASS"
+  },
+  "Figures saved by Phase 5 and Phase 7 notebooks exist": {
+   "status": "PASS"
+  }
+ },
+ "n_pass": 19,
+ "n_fail": 0,
+ "versions": {
+  "python": "3.11.5",
+  "pandas": "2.3.2",
+  "numpy": "2.3.3",
+  "sklearn": "1.7.2"
+ }
+}

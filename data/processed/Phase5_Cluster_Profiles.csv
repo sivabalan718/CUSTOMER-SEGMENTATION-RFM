@@ -1,0 +1,4 @@
+Cluster,Customers,Recency_Median,Frequency_Median,Monetary_Median,Recency_Mean,Frequency_Mean,Monetary_Mean,Segment
+0,2038,46.0,2.0,508.8,55.307163886162904,2.048577036310108,612.6749411187438,Occasional / Lower-Spend Customers
+1,980,253.0,1.0,290.455,255.7030612244898,1.3918367346938776,397.02549999999997,"At-Risk / Inactive, Low-Frequency Customers"
+2,1320,18.0,7.0,2570.495,30.596212121212123,9.843181818181819,5492.039674242425,"Recent, Frequent, High-Spend Customers"
